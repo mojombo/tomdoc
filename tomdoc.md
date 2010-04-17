@@ -1,8 +1,18 @@
 TomDoc for Ruby - Version 1.0.0
 ============
 
-TomDoc is a flexible code documentation specification with human readers in
-mind.
+TomDoc is a code documentation specification that helps you write precise
+documentation that is nice to read in plain text, yet structured enough to be
+automatically extracted and processed by a machine.
+
+
+Class Documentation
+-------------------
+
+TomDoc for a class consists of a block of single comment markers (#) that
+appear directly above the class definition. Lines should be wrapped at 80
+characters. Other than these restrictions, you may write the class
+documentation however you please.
 
 
 Method Documentation
