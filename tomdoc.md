@@ -1,4 +1,4 @@
-TomDoc 1.0.0
+TomDoc for Ruby - Version 1.0.0
 ============
 
 TomDoc is a flexible code documentation specification with human readers in
