@@ -17,6 +17,7 @@ format:
     # count - The Integer number of times to duplicate the text.
     #
     # Examples
+    #
     #   multiplex('Tom', 4)
     #   # => 'TomTomTomTom'
     #
@@ -73,14 +74,15 @@ to how normal arguments are defined:
 ### The Examples Section
 
 The examples section should start with the word "Examples" on a line by
-itself. The following lines should be indented by two spaces (three spaces
-from the initial comment marker) and contain code that shows off how to call
-the method and (optional) examples of what it returns. Everything under the
-"Examples" line should be considered code, so make sure you comment out lines
-that show return values. Separate examples should be separated by a blank
-line. For example:
+itself. The next line should be blank. The following lines should be indented
+by two spaces (three spaces from the initial comment marker) and contain code
+that shows off how to call the method and (optional) examples of what it
+returns. Everything under the "Examples" line should be considered code, so
+make sure you comment out lines that show return values. Separate examples
+should be separated by a blank line. For example:
 
     # Examples
+    #
     #   multiplex('x', 4)
     #   # => 'xxxx'
     #
