@@ -1,5 +1,5 @@
 TomDoc for Ruby - Version 1.0.0
-============
+===============================
 
 TomDoc is a code documentation specification that helps you write precise
 documentation that is nice to read in plain text, yet structured enough to be
