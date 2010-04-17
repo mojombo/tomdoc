@@ -79,6 +79,10 @@ project. This information can then be used along with [Semantic
 Versioning](http://semver.org) to inform decisions on when major, minor, and
 patch versions should be incremented.
 
+If a method's description begins with "Deprecated:" then that method will be
+considered as deprecated and users will know that it will be removed in a
+future version.
+
 ### The Arguments Section
 
 The arguments section consists of a list of arguments. Each list item MUST be
