@@ -6,13 +6,28 @@ documentation that is nice to read in plain text, yet structured enough to be
 automatically extracted and processed by a machine.
 
 
-Class Documentation
--------------------
+Class/Module Documentation
+--------------------------
 
-TomDoc for a class consists of a block of single comment markers (#) that
-appear directly above the class definition. Lines should be wrapped at 80
-characters. Other than these restrictions, you may write the class
-documentation however you please.
+TomDoc for classes and modules consists of a block of single comment markers
+(#) that appear directly above the class/module definition. Lines should be
+wrapped at 80 characters. Lines that contain text should be separated from the
+comment marker by a single space. Lines that do not contain text should
+consist of just a comment marker (no trailing spaces).
+
+Code examples should be indented two spaces (three spaces from the comment
+marker).
+
+    # Various methods useful for performing mathematical operations. All
+    # methods are module methods and should be called on the Math module.
+    # For example:
+    #
+    #   Math.square_root(9)
+    #   # => 3
+    #
+    module Math
+      ...
+    end
 
 
 Method Documentation
