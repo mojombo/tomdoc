@@ -68,6 +68,17 @@ Make sure to explain any unexpected behavior that the method may have, or any
 pitfalls that the user may experience. Lines SHOULD be wrapped at 80
 characters.
 
+If a method's description begins with "Public:" then that method will be
+considered part of the project's public API. For example:
+
+    # Public: Initialize a new Widget.
+
+This annotation is designed to let developers know which methods are
+considered stable. You SHOULD use this to document the public API of your
+project. This information can then be used along with [Semantic
+Versioning](http://semver.org) to inform decisions on when major, minor, and
+patch versions should be incremented.
+
 ### The Arguments Section
 
 The arguments section consists of a list of arguments. Each list item MUST be
