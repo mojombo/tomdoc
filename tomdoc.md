@@ -57,6 +57,18 @@ match the indentation of the explanation. For example:
     # element - The Symbol representation of the element. The Symbol should
     #           contain only lowercase ASCII alpha characters.
 
+All arguments are assumed to be required. If an argument is optional, you must
+specify the default value:
+
+    # host - The String hostname to bind (default: '0.0.0.0').
+
+For hash arguments, you should enumerate each valid option in a way similar
+to how normal arguments are defined:
+
+    # options - The Hash options used to refine the selection (default: {}):
+    #           :color  - The String color to restrict by (optional).
+    #           :weight - The Float weight to restrict by. The weight should
+    #                     be specified in grams (optional).
 
 ### The Examples Section
 
