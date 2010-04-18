@@ -5,6 +5,10 @@ TomDoc is a code documentation specification that helps you write precise
 documentation that is nice to read in plain text, yet structured enough to be
 automatically extracted and processed by a machine.
 
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
+"SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
+interpreted as described in RFC 2119.
+
 
 Class/Module Documentation
 --------------------------
