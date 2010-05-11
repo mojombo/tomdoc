@@ -1,5 +1,8 @@
-TomDoc for Ruby - Version 1.0.0
+TomDoc for Ruby - Version 0.9.0
 ===============================
+
+Purpose
+-------
 
 TomDoc is a code documentation specification that helps you write precise
 documentation that is nice to read in plain text, yet structured enough to be
@@ -164,3 +167,37 @@ the above line by at least two spaces. For example:
 
     # Returns the atomic mass of the element as a Float. The value is in
     #   unified atomic mass units.
+
+
+Special Considerations
+----------------------
+
+### Attributes
+
+Ruby's built in `attr_reader`, `attr_writer`, and `attr_accessor` require a
+bit more consideration. With TomDoc you SHOULD NOT use `attr_access` since it
+represents two methods with different signatures. Restricting yourself in this
+way also makes you think more carefully about the read vs. write behavior and
+whether each should be part of the Public API.
+
+Here is an example TomDoc for `attr_reader`.
+
+    # Public: Get the user's name.
+    #
+    # Returns the String name of the user.
+    attr_reader :name
+
+Here is an example TomDoc for `attr_writer`. The parameter name should be the
+same as the attribute name.
+
+    # Set the user's name.
+    #
+    # name - The String name of the user.
+    #
+    # Returns nothing.
+    attr_writer :name
+
+While this approach certainly takes up more space than listing dozens of
+attributes on a single line, it allows for individual documentation of each
+attribute. Attributes are an extremely important part of a class and should be
+treated with the same care as any other methods.
