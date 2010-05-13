@@ -169,6 +169,16 @@ the above line by at least two spaces. For example:
     #   unified atomic mass units.
 
 
+Constants Documentation
+-----------------------
+
+Constants should be documented with freeform comments. The type of the
+constant and any important constraints should be stated.
+
+    # Integer number of seconds to wait before connection timeout.
+    CONNECTION_TIMEOUT = 60
+
+
 Special Considerations
 ----------------------
 
