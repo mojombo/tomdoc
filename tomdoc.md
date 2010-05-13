@@ -127,8 +127,7 @@ itself. The next line SHOULD be blank. The following lines SHOULD be indented
 by two spaces (three spaces from the initial comment marker) and contain code
 that shows off how to call the method and (optional) examples of what it
 returns. Everything under the "Examples" line should be considered code, so
-make sure you comment out lines that show return values. Separate examples
-should be separated by a blank line. For example:
+make sure you comment out lines that show return values. For example:
 
     # Examples
     #
