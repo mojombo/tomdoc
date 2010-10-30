@@ -43,7 +43,7 @@ Method Documentation
 A quick example will serve to best illustrate the TomDoc method documentation
 format:
 
-    # Duplicate some text an abitrary number of times.
+    # Public: Duplicate some text an arbitrary number of times.
     #
     # text  - The String to be duplicated.
     # count - The Integer number of times to duplicate the text.
@@ -75,28 +75,29 @@ Make sure to explain any unexpected behavior that the method may have, or any
 pitfalls that the user may experience. Lines SHOULD be wrapped at 80
 characters.
 
-If a method's description begins with "Public:" then that method will be
-considered part of the project's public API. For example:
+To describe the status of a method, you SHOULD use one of several prefixes:
 
-    # Public: Initialize a new Widget.
-
+**Public:** Indicates that the method is part of the project's public API.
 This annotation is designed to let developers know which methods are
 considered stable. You SHOULD use this to document the public API of your
 project. This information can then be used along with [Semantic
 Versioning](http://semver.org) to inform decisions on when major, minor, and
 patch versions should be incremented.
 
-If a method's description begins with "Deprecated:" then that method will be
-considered as public, but no longer intended for use.
+    # Public: Initialize a new Widget.
 
-    # Deprecated: Resize an object to the given dimensions.
-
-If a method's description begins with "Internal:" then that method will be
-considered as part of the project's internal API. These are methods that are
-intended to be called from other classes within the project but not intended
-for public consumption. For example:
+**Internal:** Indicates that the method is part of the project's
+internal API. These are methods that are intended to be called from other
+classes within the project but not intended for public consumption. For
+example:
 
     # Internal: Normalize the filename.
+
+**Deprecated:** Indicates that the method is deprecated and will be removed
+in a future version. You SHOULD use this to document methods that were Public
+but will be removed at the next major version.
+
+    # Deprecated: Resize an object to the given dimensions.
 
 ### The Arguments Section
 
