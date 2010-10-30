@@ -185,7 +185,7 @@ Special Considerations
 ### Attributes
 
 Ruby's built in `attr_reader`, `attr_writer`, and `attr_accessor` require a
-bit more consideration. With TomDoc you SHOULD NOT use `attr_access` since it
+bit more consideration. With TomDoc you SHOULD NOT use `attr_accessor` since it
 represents two methods with different signatures. Restricting yourself in this
 way also makes you think more carefully about the read vs. write behavior and
 whether each should be part of the Public API.
