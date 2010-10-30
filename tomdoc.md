@@ -13,31 +13,6 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 interpreted as described in RFC 2119.
 
 
-Class/Module Documentation
---------------------------
-
-TomDoc for classes and modules consists of a block of single comment markers
-(#) that appear directly above the class/module definition. Lines SHOULD be
-wrapped at 80 characters. Lines that contain text MUST be separated from the
-comment marker by a single space. Lines that do not contain text SHOULD
-consist of just a comment marker (no trailing spaces).
-
-Code examples SHOULD be indented two spaces (three spaces from the comment
-marker).
-
-    # Various methods useful for performing mathematical operations. All
-    # methods are module methods and should be called on the Math module.
-    #
-    # Examples
-    #
-    #   Math.square_root(9)
-    #   # => 3
-    #
-    module Math
-      ...
-    end
-
-
 Method Documentation
 --------------------
 
@@ -220,6 +195,25 @@ the above line by at least two spaces. For example:
 
     # Returns the atomic mass of the element as a Float. The value is in
     #   unified atomic mass units.
+
+
+Class/Module Documentation
+--------------------------
+
+TomDoc for classes and modules follows the same form as Method Documentation
+but only contains the Description and Examples sections.
+
+    # Various methods useful for performing mathematical operations. All
+    # methods are module methods and should be called on the Math module.
+    #
+    # Examples
+    #
+    #   Math.square_root(9)
+    #   # => 3
+    #
+    module Math
+      ...
+    end
 
 
 Constants Documentation
