@@ -27,7 +27,8 @@ marker).
 
     # Various methods useful for performing mathematical operations. All
     # methods are module methods and should be called on the Math module.
-    # For example:
+    #
+    # Examples
     #
     #   Math.square_root(9)
     #   # => 3
