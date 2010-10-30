@@ -229,6 +229,36 @@ constant and any important constraints should be stated.
 Special Considerations
 ----------------------
 
+### Constructor
+
+A Ruby class's `initialize` method does not have a significant return value.
+You MAY exclude the returns section and SHOULD include a blank line between
+the arguments section and the method. A larger description of the purpose of
+this class should be done at the Class level.
+
+    # Public: Initialize a Widget.
+    #
+    # name - A String naming the widget.
+    #
+    def initialize(name)
+      ...
+    end
+
+The Examples section MAY be included.
+
+    # Public: Initialize a Widget.
+    #
+    # name - A String naming the widget.
+    #
+    # Examples
+    #
+    #   Widget.new("Tom")
+    #   # => <Widget name=Tom>
+    #
+    def initialize(name)
+      ...
+    end
+
 ### Attributes
 
 Ruby's built in `attr_reader`, `attr_writer`, and `attr_accessor` require a
