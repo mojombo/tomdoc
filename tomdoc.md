@@ -115,6 +115,11 @@ to match the indentation of the explanation. For example:
     # element - The Symbol representation of the element. The Symbol should
     #           contain only lowercase ASCII alpha characters.
 
+An argument that is String-like might look like this:
+
+    # actor - An object that responds to to_s. Represents the actor that
+    #         will be output in the log.
+
 All arguments are assumed to be required. If an argument is optional, you MUST
 specify the default value:
 
