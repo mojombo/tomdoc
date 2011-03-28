@@ -107,7 +107,7 @@ SHOULD be clearly indicated in the explanation. When you specify a type, use
 the proper classname of the type (for instance, use 'String' instead of
 'string' to refer to a String type). If the argument has other constraints
 (e.g. duck-typed method requirements), simply state those requirements. The
-dashes following each argument name should be lined up in a single column.
+dashes following each argument name SHOULD be lined up in a single column.
 Lines SHOULD be wrapped at 80 columns. If an explanation is longer than that,
 additional lines MUST be indented at least two spaces but SHOULD be indented
 to match the indentation of the explanation. For example:
