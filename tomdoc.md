@@ -147,6 +147,17 @@ demonstrate how methods should be invoked. For example:
       ...
     end
 
+### The Yields Section
+
+The yields section is used to specify what is sent to the implicitly given
+block. The section MUST start with the word "Yields" and SHOULD contain a
+description and type of the yielded object. For example:
+
+    # Yields the Integer index of the iteration.
+
+Lines SHOULD be wrapped at 80 columns. Wrapped lines MUST be indented under
+the above line by at least two spaces.
+
 ### The Examples Section
 
 The examples section MUST start with the word "Examples" on a line by
