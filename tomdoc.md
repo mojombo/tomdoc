@@ -59,13 +59,13 @@ format:
     end
 
 TomDoc for a specific method consists of a block of single comment markers (#)
-that appears directly above the method. There SHOULD NOT be a blank line between
-the comment block and the method definition. A TomDoc method block consists of
-a description section (required), an arguments section (required if the method
-takes any arguments), an examples section (optional), and a returns section
-(required). Lines that contain text MUST be separated from the comment
-marker by a single space. Lines that do not contain text SHOULD consist of
-just a comment marker (no trailing spaces).
+that appears directly above the method. There SHOULD NOT be a blank line
+between the comment block and the method definition. A TomDoc method block
+consists of five optional sections: a description section, an arguments
+section, a yields section, an examples section, and a returns section. Lines
+that contain text MUST be separated from the comment marker by a single space.
+Lines that do not contain text SHOULD consist of just a comment marker (no
+trailing spaces).
 
 ### The Description Section
 
