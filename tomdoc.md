@@ -87,8 +87,16 @@ Versioning](http://semver.org) to inform decisions on when major, minor, and
 patch versions should be incremented.
 
 If a method's description begins with "Deprecated:" then that method will be
-considered as deprecated and users will know that it will be removed in a
-future version.
+considered as public, but no longer intended for use.
+
+    # Deprecated: Resize an object to the given dimensions.
+
+If a method's description begins with "Internal:" then that method will be
+considered as part of the project's internal API. These are methods that are
+intended to be called from other classes within the project but not intended
+for public consumption. For example:
+
+    # Internal: Normalize the filename.
 
 ### The Arguments Section
 
