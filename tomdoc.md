@@ -120,6 +120,33 @@ to how normal arguments are defined:
     #           :weight - The Float weight to restrict by. The weight should
     #                     be specified in grams (optional).
 
+Ruby allows for some interesting argument capabilities. In those cases, try
+to explain what's going on as best as possible. Examples are a good way to
+demonstrate how methods should be invoked. For example:
+
+    # Print a log line to STDOUT. You can customize the output by specifying
+    # a block.
+    #
+    # msgs  - Zero or more String messages that will be printed to the log
+    #         separated by spaces.
+    # block - An optional block that can be used to customize the date format.
+    #         If it is present, it will be sent a Time object representing
+    #         the current time. Your block should return a String version of
+    #         the time, formatted however you please.
+    #
+    # Examples
+    #
+    #   log("An error occurred.")
+    #
+    #   log("No such file", "/var/log/server.log") do |time|
+    #     time.strftime("%Y-%m-%d %H:%M:%S")
+    #   end
+    #
+    # Returns nothing.
+    def log(*msgs, &block)
+      ...
+    end
+
 ### The Examples Section
 
 The examples section MUST start with the word "Examples" on a line by
