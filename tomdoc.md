@@ -210,7 +210,6 @@ but only contains the Description and Examples sections.
     #
     #   Math.square_root(9)
     #   # => 3
-    #
     module Math
       ...
     end
@@ -232,14 +231,12 @@ Special Considerations
 ### Constructor
 
 A Ruby class's `initialize` method does not have a significant return value.
-You MAY exclude the returns section and SHOULD include a blank line between
-the arguments section and the method. A larger description of the purpose of
+You MAY exclude the returns section. A larger description of the purpose of
 this class should be done at the Class level.
 
     # Public: Initialize a Widget.
     #
     # name - A String naming the widget.
-    #
     def initialize(name)
       ...
     end
@@ -254,7 +251,6 @@ The Examples section MAY be included.
     #
     #   Widget.new("Tom")
     #   # => <Widget name=Tom>
-    #
     def initialize(name)
       ...
     end
