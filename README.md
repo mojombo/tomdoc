@@ -8,7 +8,7 @@ This is the TomDoc specification text. Work on the specification itself will
 be done here and then transferred to http://tomdoc.org when a new version has
 been tagged.
 
-# Contributing
+## Contributing
 
 This code can be found online at http://github.com/mojombo/tomdoc.
 
