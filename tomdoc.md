@@ -48,7 +48,9 @@ trailing spaces).
 The description section SHOULD be in plain sentences. Each sentence SHOULD end
 with a period. Good descriptions explain what the code does at a high level.
 Make sure to explain any unexpected behavior that the method may have, or any
-pitfalls that the user may experience. Lines SHOULD be wrapped at 80
+pitfalls that the user may experience. Paragraphs SHOULD be separated with
+blank lines. Code within the description section should be indented three
+spaces from the starting comment symbol. Lines SHOULD be wrapped at 80
 characters.
 
 To describe the status of a method, you SHOULD use one of several prefixes:
@@ -74,6 +76,20 @@ in a future version. You SHOULD use this to document methods that were Public
 but will be removed at the next major version.
 
     # Deprecated: Resize an object to the given dimensions.
+
+An example description that includes all of these elements might look
+something like the following.
+
+    # Public: Format some data with the given format. Possible format
+    # identifiers include:
+    #
+    # %i   - Output the Integer i.
+    # %f.n - Output a Float f with n decimal places rounded.
+    #
+    # The format String may include any text. To escape a percent sign, prefix
+    # it with a backslash:
+    #
+    #   "The sale price was %f.n\% off retail."
 
 ### The Arguments Section
 
