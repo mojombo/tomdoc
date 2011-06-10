@@ -291,5 +291,5 @@ Here is an example TomDoc for `attr_writer`.
 For `attr_accessor` you can use an overloaded shorthand that documents the
 getter and setter simultaneously:
 
-    # Gets/Sets the String name of the user.
+    # Public: Gets/Sets the String name of the user.
     attr_accessor :name
