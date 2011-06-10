@@ -285,7 +285,7 @@ Here is an example TomDoc for `attr_reader`.
 
 Here is an example TomDoc for `attr_writer`.
 
-    # Sets the String name of the user.
+    # Public: Sets the String name of the user.
     attr_writer :name
 
 For `attr_accessor` you can use an overloaded shorthand that documents the
