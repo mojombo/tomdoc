@@ -181,7 +181,7 @@ make sure you comment out lines that show return values. For example:
     #   multiplex('apple', 2)
     #   # => 'appleapple'
 
-### The Returns Section
+### The Returns/Raises Section
 
 The returns section should explain in plain sentences what is returned from
 the method. The line MUST begin with "Returns". If only a single thing is
