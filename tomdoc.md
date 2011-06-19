@@ -263,7 +263,6 @@ this class should be done at the Class level.
       ...
     end
 
-
 ### Attributes
 
 Ruby's built in `attr_reader`, `attr_writer`, and `attr_accessor` require a
