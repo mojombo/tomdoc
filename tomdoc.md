@@ -1,5 +1,5 @@
-TomDoc for Ruby - Version 1.0.0.pre
-====================================
+TomDoc for Ruby - Version 1.0.0-pre
+===================================
 
 Purpose
 -------
