@@ -219,8 +219,8 @@ Class/Module Documentation
 TomDoc for classes and modules follows the same form as Method Documentation
 but only contains the Description and Examples sections.
 
-    # Various methods useful for performing mathematical operations. All
-    # methods are module methods and should be called on the Math module.
+    # Public: Various methods useful for performing mathematical operations.
+    # All methods are module methods and should be called on the Math module.
     #
     # Examples
     #
@@ -230,6 +230,9 @@ but only contains the Description and Examples sections.
       ...
     end
 
+Just like methods, classes may be marked as Public, Internal, or Deprecated
+depending on their intended use.
+
 
 Constants Documentation
 -----------------------
@@ -237,8 +240,11 @@ Constants Documentation
 Constants should be documented with freeform comments. The type of the
 constant and any important constraints should be stated.
 
-    # Integer number of seconds to wait before connection timeout.
+    # Public: Integer number of seconds to wait before connection timeout.
     CONNECTION_TIMEOUT = 60
+
+Just like methods, constants may be marked as Public, Internal, or Deprecated
+depending on their intended use.
 
 
 Special Considerations
