@@ -263,19 +263,6 @@ this class should be done at the Class level.
       ...
     end
 
-The Examples section MAY be included.
-
-    # Public: Initialize a Widget.
-    #
-    # name - A String naming the widget.
-    #
-    # Examples
-    #
-    #   Widget.new("Tom")
-    #   # => <Widget name=Tom>
-    def initialize(name)
-      ...
-    end
 
 ### Attributes
 
