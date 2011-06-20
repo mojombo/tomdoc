@@ -38,10 +38,10 @@ TomDoc for a specific method consists of a block of single comment markers (#)
 that appears directly above the method. There SHOULD NOT be a blank line
 between the comment block and the method definition. A TomDoc method block
 consists of five optional sections: a description section, an arguments
-section, a yields section, an examples section, and a returns section. Lines
-that contain text MUST be separated from the comment marker by a single space.
-Lines that do not contain text SHOULD consist of just a comment marker (no
-trailing spaces).
+section, a yields section, an examples section, a returns section, and a
+signature section. Lines that contain text MUST be separated from the comment
+marker by a single space. Lines that do not contain text SHOULD consist of
+just a comment marker (no trailing spaces).
 
 ### The Description Section
 
@@ -211,6 +211,48 @@ the above line by at least two spaces. For example:
 
     # Returns the atomic mass of the element as a Float. The value is in
     #   unified atomic mass units.
+
+### The Signature Section
+
+The signature section allows you specify the nature of methods that are
+dynamically created at runtime.
+
+The section MUST start with the word "Signature" on a line by itself. The next
+line SHOULD be blank. The following lines SHOULD be indented by two spaces
+(three spaces from the initial comment marker) and contain special code that
+shows the method signature(s). For complex dynamic signatures, you SHOULD name
+and demarcate signature variables with `<>` for required parts and `[]` for
+optional parts. Use `...` for repeating elements. If there are dynamic
+elements to the signature, document them in the same was as the Arguments
+section, but leave out any type declarations. Documentation for metaprogrammed
+methods may exist independent of any actual code, or it may appear above the
+code that creates the methods. Use your best judgment.
+
+    # Signature
+    #
+    #   find_by_<field>[_and_<field>...](args)
+    #
+    # field - A field name.
+
+Because metaprogrammed methods may be difficult to decipher, it's best to
+include an examples section to demonstrate proper usage. For example:
+
+    # Public: Find Records by a specific field name and value. This method
+    # will be available for each field defined on the record.
+    #
+    # args - The value or Array of values of the field(s) to find by.
+    #
+    # Examples
+    #
+    #   find_by_name_and_email("Tom", "tom@mojombo.com")
+    #
+    # Returns an Array of matching Records.
+    #
+    # Signature
+    #
+    #   find_by_<field>[_and_<field>...](args)
+    #
+    # field - A field name.
 
 
 Class/Module Documentation
