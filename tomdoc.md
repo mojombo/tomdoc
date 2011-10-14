@@ -12,7 +12,24 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
 interpreted as described in RFC 2119.
 
+Table of Contents
+-----------------
 
+* [Method Documentation](#method)
+  * [The Description Section](#description)
+  * [The Arguments Section](#arguments)
+  * [The Yields Section](#yields)
+  * [The Examples Section](#examples)
+  * [The Returns/Raises Section](#returns)
+  * [The Signature Section](#signature)
+* [Class/Module Documentation](#class)
+* [Constants Documentation](#constants)
+* [Special Considerations](#special)
+  * [Constructor](#constructor)
+  * [Attributes](#attributes)
+
+
+<a name="method" />
 Method Documentation
 --------------------
 
@@ -43,6 +60,8 @@ signature section. Lines that contain text MUST be separated from the comment
 marker by a single space. Lines that do not contain text SHOULD consist of
 just a comment marker (no trailing spaces).
 
+
+<a name="description" />
 ### The Description Section
 
 The description section SHOULD be in plain sentences. Each sentence SHOULD end
@@ -91,6 +110,8 @@ something like the following.
     #
     #   "The sale price was %f.n\% off retail."
 
+
+<a name="arguments" />
 ### The Arguments Section
 
 The arguments section consists of a list of arguments. Each list item MUST be
@@ -153,6 +174,8 @@ demonstrate how methods should be invoked. For example:
       ...
     end
 
+
+<a name="yields" />
 ### The Yields Section
 
 The yields section is used to specify what is sent to the implicitly given
@@ -164,6 +187,7 @@ description and type of the yielded object. For example:
 Lines SHOULD be wrapped at 80 columns. Wrapped lines MUST be indented under
 the above line by at least two spaces.
 
+<a name="examples" />
 ### The Examples Section
 
 The examples section MUST start with the word "Examples" on a line by
@@ -181,6 +205,8 @@ make sure you comment out lines that show return values. For example:
     #   multiplex('apple', 2)
     #   # => 'appleapple'
 
+
+<a name="returns" />
 ### The Returns/Raises Section
 
 The returns section should explain in plain sentences what is returned from
@@ -212,6 +238,8 @@ the above line by at least two spaces. For example:
     # Returns the atomic mass of the element as a Float. The value is in
     #   unified atomic mass units.
 
+
+<a name="signature" />
 ### The Signature Section
 
 The signature section allows you specify the nature of methods that are
@@ -255,6 +283,7 @@ include an examples section to demonstrate proper usage. For example:
     # field - A field name.
 
 
+<a name="class" />
 Class/Module Documentation
 --------------------------
 
@@ -276,6 +305,7 @@ Just like methods, classes may be marked as Public, Internal, or Deprecated
 depending on their intended use.
 
 
+<a name="constants" />
 Constants Documentation
 -----------------------
 
@@ -289,9 +319,11 @@ Just like methods, constants may be marked as Public, Internal, or Deprecated
 depending on their intended use.
 
 
+<a name="special" />
 Special Considerations
 ----------------------
 
+<a name="constructor" />
 ### Constructor
 
 A Ruby class's `initialize` method does not have a significant return value.
@@ -305,6 +337,7 @@ this class should be done at the Class level.
       ...
     end
 
+<a name="attributes" />
 ### Attributes
 
 Ruby's built in `attr_reader`, `attr_writer`, and `attr_accessor` require a
