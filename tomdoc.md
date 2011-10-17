@@ -122,8 +122,8 @@ the proper classname of the type (for instance, use 'String' instead of
 'string' to refer to a String type). If the argument has other constraints
 (e.g. duck-typed method requirements), simply state those requirements. The
 dashes following each argument name SHOULD be lined up in a single column.
-Lines SHOULD be wrapped at 80 columns. If an explanation is longer than that,
-additional lines MUST be indented at least two spaces but SHOULD be indented
+Lines SHOULD be wrapped at 80 columns.  Wrapped lines MUST be indented, as a
+block, under the parent line by at least two spaces, but SHOULD be indented
 to match the indentation of the explanation. For example:
 
     # element - The Symbol representation of the element. The Symbol should
@@ -184,8 +184,8 @@ description and type of the yielded object. For example:
 
     # Yields the Integer index of the iteration.
 
-Lines SHOULD be wrapped at 80 columns. Wrapped lines MUST be indented under
-the above line by at least two spaces.
+Lines SHOULD be wrapped at 80 columns. Wrapped lines MUST be indented, as a
+block, under the parent line by at least two spaces.
 
 <a name="examples" />
 ### The Examples Section
@@ -193,9 +193,9 @@ the above line by at least two spaces.
 The examples section MUST start with the word "Examples" on a line by
 itself. The next line SHOULD be blank. The following lines SHOULD be indented
 by two spaces (three spaces from the initial comment marker) and contain code
-that shows off how to call the method and (optional) examples of what it
-returns. Everything under the "Examples" line should be considered code, so
-make sure you comment out lines that show return values. For example:
+that shows how to call the method and OPTIONAL examples of what it
+returns. Everything under the "Examples" line is considered code, so
+you SHOULD comment out lines that show return values. For example:
 
     # Examples
     #
@@ -232,8 +232,8 @@ be encountered. The lines MUST begin with "Raises". For example:
     # Raises Errno::ENOENT if the file cannot be found.
     # Raises Errno::EACCES if the file cannot be accessed.
 
-Lines SHOULD be wrapped at 80 columns. Wrapped lines MUST be indented under
-the above line by at least two spaces. For example:
+Lines SHOULD be wrapped at 80 columns. Wrapped lines MUST be indented, as a
+block, under the parent line by at least two spaces. For example:
 
     # Returns the atomic mass of the element as a Float. The value is in
     #   unified atomic mass units.
@@ -251,9 +251,9 @@ line SHOULD be blank. The following lines SHOULD be indented by two spaces
 shows the method signature(s). For complex dynamic signatures, you SHOULD name
 and demarcate signature variables with `<>` for required parts and `[]` for
 optional parts. Use `...` for repeating elements. If there are dynamic
-elements to the signature, document them in the same was as the Arguments
+elements to the signature, document them in the same way as the Arguments
 section, but leave out any type declarations. Documentation for metaprogrammed
-methods may exist independent of any actual code, or it may appear above the
+methods may exist independently of any actual code, or may appear above the
 code that creates the methods. Use your best judgment.
 
     # Signature
