@@ -22,6 +22,7 @@ Table of Contents
   * [Attributes](#attributes)
 * [Method Documentation](#method)
   * [The Description Section](#description)
+  * [The Arguments Section](#arguments)
   * [The Yields Section](#yields)
   * [The Examples Section](#examples)
   * [The Returns/Raises Section](#returns)
