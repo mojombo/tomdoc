@@ -15,18 +15,98 @@ interpreted as described in RFC 2119.
 Table of Contents
 -----------------
 
-* [Method Documentation](#method)
-  * [The Description Section](#description)
-  * [The Arguments Section](#arguments)
-  * [The Yields Section](#yields)
-  * [The Examples Section](#examples)
-  * [The Returns/Raises Section](#returns)
-  * [The Signature Section](#signature)
 * [Class/Module Documentation](#class)
 * [Constants Documentation](#constants)
 * [Special Considerations](#special)
   * [Constructor](#constructor)
   * [Attributes](#attributes)
+* [Method Documentation](#method)
+  * [The Description Section](#description)
+  * [The Yields Section](#yields)
+  * [The Examples Section](#examples)
+  * [The Returns/Raises Section](#returns)
+  * [The Signature Section](#signature)
+
+
+<a name="class" />
+Class/Module Documentation
+--------------------------
+
+TomDoc for classes and modules follows the same form as Method Documentation
+but only contains the Description and Examples sections.
+
+    # Public: Various methods useful for performing mathematical operations.
+    # All methods are module methods and should be called on the Math module.
+    #
+    # Examples
+    #
+    #   Math.square_root(9)
+    #   # => 3
+    module Math
+      ...
+    end
+
+Just like methods, classes may be marked as Public, Internal, or Deprecated
+depending on their intended use.
+
+
+<a name="constants" />
+Constants Documentation
+-----------------------
+
+Constants should be documented with freeform comments. The type of the
+constant and any important constraints should be stated.
+
+    # Public: Integer number of seconds to wait before connection timeout.
+    CONNECTION_TIMEOUT = 60
+
+Just like methods, constants may be marked as Public, Internal, or Deprecated
+depending on their intended use.
+
+
+<a name="special" />
+Special Considerations
+----------------------
+
+
+<a name="constructor" />
+### Constructor
+
+A Ruby class's `initialize` method does not have a significant return value.
+You MAY exclude the returns section. A larger description of the purpose of
+this class should be done at the Class level.
+
+    # Public: Initialize a Widget.
+    #
+    # name - A String naming the widget.
+    def initialize(name)
+      ...
+    end
+
+
+<a name="attributes" />
+### Attributes
+
+Ruby's built in `attr_reader`, `attr_writer`, and `attr_accessor` require a
+bit more consideration. With TomDoc you SHOULD document each of these method
+generators separately. Because each part of a method documentation section is
+optional, you can write concise yet unambiguous docs.
+
+Here is an example TomDoc for `attr_reader`.
+
+    # Public: Returns the String name of the user.
+    attr_reader :name
+
+Here is an example TomDoc for `attr_writer`.
+
+    # Public: Sets the String name of the user.
+    attr_writer :name
+
+For `attr_accessor` you can use an overloaded shorthand that documents the
+getter and setter simultaneously:
+
+    # Public: Gets/Sets the String name of the user.
+    attr_accessor :name
 
 
 <a name="method" />
@@ -187,6 +267,7 @@ description and type of the yielded object. For example:
 Lines SHOULD be wrapped at 80 columns. Wrapped lines MUST be indented under
 the above line by at least two spaces.
 
+
 <a name="examples" />
 ### The Examples Section
 
@@ -281,82 +362,3 @@ include an examples section to demonstrate proper usage. For example:
     #   find_by_<field>[_and_<field>...](args)
     #
     # field - A field name.
-
-
-<a name="class" />
-Class/Module Documentation
---------------------------
-
-TomDoc for classes and modules follows the same form as Method Documentation
-but only contains the Description and Examples sections.
-
-    # Public: Various methods useful for performing mathematical operations.
-    # All methods are module methods and should be called on the Math module.
-    #
-    # Examples
-    #
-    #   Math.square_root(9)
-    #   # => 3
-    module Math
-      ...
-    end
-
-Just like methods, classes may be marked as Public, Internal, or Deprecated
-depending on their intended use.
-
-
-<a name="constants" />
-Constants Documentation
------------------------
-
-Constants should be documented with freeform comments. The type of the
-constant and any important constraints should be stated.
-
-    # Public: Integer number of seconds to wait before connection timeout.
-    CONNECTION_TIMEOUT = 60
-
-Just like methods, constants may be marked as Public, Internal, or Deprecated
-depending on their intended use.
-
-
-<a name="special" />
-Special Considerations
-----------------------
-
-<a name="constructor" />
-### Constructor
-
-A Ruby class's `initialize` method does not have a significant return value.
-You MAY exclude the returns section. A larger description of the purpose of
-this class should be done at the Class level.
-
-    # Public: Initialize a Widget.
-    #
-    # name - A String naming the widget.
-    def initialize(name)
-      ...
-    end
-
-<a name="attributes" />
-### Attributes
-
-Ruby's built in `attr_reader`, `attr_writer`, and `attr_accessor` require a
-bit more consideration. With TomDoc you SHOULD document each of these method
-generators separately. Because each part of a method documentation section is
-optional, you can write concise yet unambiguous docs.
-
-Here is an example TomDoc for `attr_reader`.
-
-    # Public: Returns the String name of the user.
-    attr_reader :name
-
-Here is an example TomDoc for `attr_writer`.
-
-    # Public: Sets the String name of the user.
-    attr_writer :name
-
-For `attr_accessor` you can use an overloaded shorthand that documents the
-getter and setter simultaneously:
-
-    # Public: Gets/Sets the String name of the user.
-    attr_accessor :name
