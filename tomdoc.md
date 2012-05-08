@@ -242,7 +242,7 @@ block, under the parent line by at least two spaces. For example:
 <a name="signature" />
 ### The Signature Section
 
-The signature section allows you specify the nature of methods that are
+The signature section allows you to specify the nature of methods that are
 dynamically created at runtime.
 
 The section MUST start with the word "Signature" on a line by itself. The next
