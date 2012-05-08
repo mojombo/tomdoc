@@ -217,17 +217,21 @@ the above line by at least two spaces. For example:
 The signature section allows you to specify the nature of methods that are
 dynamically created at runtime.
 
-The section MUST start with the word "Signature" on a line by itself. The next
-line SHOULD be blank. The following lines SHOULD be indented by two spaces
-(three spaces from the initial comment marker) and contain special code that
-shows the method signature(s). For complex dynamic signatures, you SHOULD name
-and demarcate signature variables with `<>` for required parts and `[]` for
-optional parts. Use `...` for repeating elements. If there are dynamic
-elements to the signature, document them in the same was as the Arguments
-section, but leave out any type declarations. Documentation for metaprogrammed
-methods may exist independent of any actual code, or it may appear above the
-code that creates the methods. Use your best judgment.
+The section MUST start with a line with two hyphens followed by a blank line.
+This separator makes it easy to visually distinguish the method documentation
+from the signature documentation. The next line MUST be the word "Signature" by
+itself. The next line SHOULD be blank. The following lines SHOULD be indented
+by two spaces (three spaces from the initial comment marker) and contain
+special code that shows the method signature(s). For complex dynamic
+signatures, you SHOULD name and demarcate signature variables with `<>` for
+required parts and `[]` for optional parts. Use `...` for repeating elements.
+If there are dynamic elements to the signature, document them in the same was
+as the Arguments section, but leave out any type declarations. Documentation
+for metaprogrammed methods may exist independent of any actual code, or it may
+appear above the code that creates the methods. Use your best judgment.
 
+    # --
+    #
     # Signature
     #
     #   find_by_<field>[_and_<field>...](args)
@@ -247,6 +251,8 @@ include an examples section to demonstrate proper usage. For example:
     #   find_by_name_and_email("Tom", "tom@mojombo.com")
     #
     # Returns an Array of matching Records.
+    #
+    # --
     #
     # Signature
     #
