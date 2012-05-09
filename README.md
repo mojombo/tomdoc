@@ -10,7 +10,7 @@ been tagged.
 
 ## Contributing
 
-This code can be found online at http://github.com/mojombo/tomdoc
+This code can be found online at http://github.com/defunkt/tomdoc
 
 If you'd like to discuss the spec or ask a question, use the GitHub Issues
 system. To propose a concrete change, create a Pull Request on GitHub.
