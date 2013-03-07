@@ -68,7 +68,7 @@ The description section SHOULD be in plain sentences. Each sentence SHOULD end
 with a period. Good descriptions explain what the code does at a high level.
 Make sure to explain any unexpected behavior that the method may have, or any
 pitfalls that the user may experience. Paragraphs SHOULD be separated with
-blank lines. Code within the description section should be indented three
+blank lines. Code within the description section SHOULD be indented three
 spaces from the starting comment symbol. Lines SHOULD be wrapped at 80
 characters.
 
